@@ -1,0 +1,38 @@
+{{extend './_layouts/home.html'}}
+
+{{block 'title'}}{{'苏州奥诺生物技术 - 新闻中心'}}{{/block}}
+{{block 'head'}}
+<style>
+    .headerbg .gwidth .nav_right li:nth-of-type(1) a{
+        color: red;
+    }
+</style>
+{{/block}}
+{{block 'body'}}
+<section class="commonmain">
+    <div class="gwidth aonuotitle">
+        <img src="/public/img/newsaonuobg.png" alt="">
+        <p>一家专注于母婴行业，提供专业化，个性化的母婴连锁品牌</p>
+    </div>
+    <div class="gwidth">
+        <ul class="aonuoproductul">
+            {{each newslist}}
+            <li class="aonuoproductli">
+                <a href="newsdetail?id={{$value.id}}">
+                    <img src="{{$value.url}}" alt="">
+                    <div>
+                        <h3>{{$value.title}}</h3>
+                        <p>{{$value.content}}</p>
+                        <time class="newstime">{{$value.date}}</time>
+                    </div>
+                </a>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+</section>
+
+
+{{/block}}
+
+

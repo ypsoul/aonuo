@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{block 'title'}}苏州奥诺生物技术{{/block}}</title>
+  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="/public/css/normalize.css">
+  <link rel="stylesheet" href="/public/css/swiper.min.css">
+  <link rel="stylesheet" href="/public/css/main.css">
+  <style>
+    .navbar{
+      margin-bottom: 0;
+    }
+  </style>
+  {{block 'head'}}{{/block}}
+</head>
+
+<body>
+  {{include '../_partials/header.html'}}
+  {{block 'body'}}{{/block}}
+  {{include '../_partials/footer.html'}}
+  <script src="/node_modules/jquery/dist/jquery.js"></script>
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="/public/js/swiper.min.js"></script>
+  <script src="/public/js/main.js"></script>
+  {{block 'script'}}{{/block}}
+</body>
+
+</html>
